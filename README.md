@@ -5,8 +5,7 @@ Objectif du TP : L’objectif du TP est de développer un micro-shell capable d�
 
 1) Affichage d’un message d’accueil :
 
-Dans cette première étape du micro-shell ENSEASH, nous affichons simplement un message d’accueil suivi d’un prompt minimal. Le texte est envoyé sur la sortie standard avec write(), conformément aux consignes, et sa longueur est déterminée avec strlen(). Cette question initialise l’interface du shell avant l’ajout de la lecture et de l’exécution des commandes.
-
+Dans cette première étape du micro-shell ENSEASH, nous affichons simplement un message d’accueil suivi d’un prompt minimal. Le texte est envoyé sur la sortie standard avec write(), conformément aux consignes, et sa longueur est déterminée avec strlen().
 
 2) Exécution de la commande saisie :
 
