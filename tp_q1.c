@@ -1,5 +1,7 @@
-#include <unistd.h>
+#include <unistd.h> 
 #include <string.h>
+
+// Regrag Salma & CHEIKH SIDIYA Abdellahi
 
 int main(){
     // Text to display on start
