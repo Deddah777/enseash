@@ -19,5 +19,5 @@ c) Cette ligne dans la boucle infinie nous permet de retourner à la ligne suiva
 
 
 3) Gestion de la sortie du shell :
-   Le micro-shell ENSEASH gère la sortie à la fois avec la commande exit et avec <Ctrl>+D. Pour exit, on compare la commande saisie à la chaîne "exit" avec     strcmp(), qui renvoie 0 si les deux chaînes sont identiques. L’exécution de cette vérification se fait avant le fork(), afin d’éviter la création d’un       nouveau processus inutile. Pour <Ctrl>+D, qui envoie un signal End Of File (EOF), read() retourne 0, ce qui permet de détecter qu’il n’y a plus rien à       lire. La condition || n == 0 permet donc de fermer correctement le shell dans ce cas.
+   Le micro-shell ENSEASH gère la sortie à la fois avec la commande exit et avec <Ctrl>+D. Pour exit, on compare la commande saisie à la chaîne "exit" avec     strcmp(), qui renvoie 0 si les deux chaînes sont identiques. L’exécution de cette vérification se fait avant le fork(), afin d’éviter la création d’un       nouveau processus inutile. Pour Ctrl +D, qui envoie un signal End Of File (EOF), read() retourne 0, ce qui permet de détecter qu’il n’y a plus rien à        lire. La condition || n == 0 permet donc de fermer correctement le shell dans ce cas.
 
