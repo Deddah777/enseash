@@ -1,6 +1,8 @@
 #include <unistd.h>
 #include <string.h>
 
+// CHEIKH SIDIYA Abdellahi & REGRAG Salma
+
 int main(){
     // Text to display on start
     const char *mess_prompt = "Bienvenue dans le Shell ENSEA.\nPour quitter, tapez 'exit'.\nenseash%\n";
