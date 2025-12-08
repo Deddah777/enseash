@@ -1,4 +1,4 @@
-# enseash
+# enseash (Abdellahi CHEIKH SIDIYA & Salma REGRAG)
 Micro Shell
 
 Objectif du TP : L’objectif du TP est de développer un micro-shell capable d’exécuter des commandes et d’afficher leurs codes de sortie ainsi que leurs temps d’exécution.
