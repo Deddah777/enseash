@@ -18,7 +18,7 @@ void writeRet(char *str, int code, int time_ms) {
     write(STDOUT_FILENO, str, strlen(str));   // print to terminal
 }
 
-// Split a command string into an array of arguments for execvp
+// Split a command string into an array 
 char **splitCommand(char *cmd) {
     char **argv = malloc(BUFSIZE * sizeof(char *)); // allocate array of string pointers
     int i = 0;
