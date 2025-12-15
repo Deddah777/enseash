@@ -30,7 +30,7 @@ char **splitCommand(char *cmd) {
         i++;
         token = strtok(NULL, " ");          // get next token
     }
-    argv[i] = NULL; // execvp expects last element to be NULL
+    argv[i] = NULL; 
     return argv;
 }
 
