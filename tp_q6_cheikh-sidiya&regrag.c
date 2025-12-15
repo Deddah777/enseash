@@ -8,27 +8,27 @@
 
 #define BUFSIZE 1000    // Maximum command length
 
-// Function to print exit code or signal along with execution time
+// Display the shell prompt with exit code or signal and execution time
 void writeRet(char *str, int code, int time_ms) {
     char buf[BUFSIZE];
-    sprintf(buf, "%d|%dms] ", code, time_ms); 
-    strcat(str, buf);
+    sprintf(buf, "%d|%dms] ", code, time_ms); // format code and time
+    strcat(str, buf);                         // append to prompt string
     write(STDOUT_FILENO, str, strlen(str));   // print to terminal
 }
 
-// Function to split command line into arguments
+// Split a command string into an array of arguments for execvp
 char **splitCommand(char *cmd) {
-    char **argv = malloc(BUFSIZE * sizeof(char *)); // array of string pointers
+    char **argv = malloc(BUFSIZE * sizeof(char *)); // allocate array of string pointers
     int i = 0;
 
-    char *token = strtok(cmd, " "); // split by spaces
+    char *token = strtok(cmd, " "); // split command by spaces
     while (token != NULL) {
         argv[i] = malloc(strlen(token) + 1); // allocate memory for each argument
-        strcpy(argv[i], token);
+        strcpy(argv[i], token);             // copy argument into array
         i++;
-        token = strtok(NULL, " ");
+        token = strtok(NULL, " ");          // get next token
     }
-    argv[i] = NULL; // last element must be NULL for execvp
+    argv[i] = NULL; // execvp expects last element to be NULL
     return argv;
 }
 
