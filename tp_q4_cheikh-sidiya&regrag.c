@@ -20,7 +20,7 @@ void writeRet(char *str, int code) {
 void Commande(char *cmd, ssize_t n) {
     int pid, status;
     char msg[BUFSIZE];
-    cmd[n - 1] = '\0';          // Remove newline from input
+    cmd[n - 1] = '\0';          // Remove \n
     
     // Exit the shell if user types "exit" or enters nothing
     if (strcmp("exit", cmd) == 0 || n == 0) {
