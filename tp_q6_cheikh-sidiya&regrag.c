@@ -6,6 +6,8 @@
 #include <signal.h>
 #include <time.h>
 
+// Abdellahi CHEIKH SIDIYA & Salma REGRAG
+
 #define BUFSIZE 1000    // Maximum command length
 
 // Display the shell prompt with exit code or signal and execution time
