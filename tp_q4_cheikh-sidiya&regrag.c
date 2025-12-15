@@ -35,7 +35,7 @@ void Commande(char *cmd, ssize_t n) {
     }
     else if (pid == 0) {        // Child process
         execlp(cmd, cmd, NULL); // Execute command
-        perror("execlp");       // Print error if exec fails
+        perror("execlp");       // Print error if execlp fails
         exit(EXIT_FAILURE);     
     }
     else {                      // Parent process
