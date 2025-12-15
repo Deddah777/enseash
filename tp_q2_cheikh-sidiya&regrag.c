@@ -2,7 +2,11 @@
 #include <string.h>     
 #include <stdlib.h>     
 #include <sys/wait.h>   
-#include <stdio.h>      
+#include <stdio.h>     
+
+
+// Abdellahi CHEIKH SIDIYA & Salma REGRAG
+
 
 #define BUFSIZE 1000    // max command size
 
