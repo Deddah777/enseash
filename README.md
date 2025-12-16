@@ -31,4 +31,6 @@ c) Cette ligne dans la boucle infinie nous permet de retourner à la ligne suiva
    La différence entre ces deux instants permet de calculer le temps d’exécution en millisecondes.
    Ce temps est ensuite affiché dans le prompt, en complément du code de retour ou du signal, sous la forme [exit:code|Xms] ou [sign:num|Xms].
 
+6) Pour exécuter une commande complexe avec arguments, le shell lit la ligne saisie puis utilise splitCommand pour la découper en un tableau de chaînes (char **argv), chaque    argument étant séparé par des espaces et le tableau terminé par NULL. Un processus fils est créé avec fork(), et execvp(argv[0], argv) est appelé dans ce fils pour lancer    la commande avec tous ses arguments. Le processus parent utilise wait() pour attendre la fin de l’exécution et récupère le code de sortie ou le signal ayant terminé le       fils. Le temps d’exécution est mesuré avec clock_gettime(), puis affiché dans le prompt avec le code de retour.
+
 
